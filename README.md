@@ -34,7 +34,7 @@ the sides and names `local sideAndName = ({` \
 ` name = name to get/set it later`
 `})`
 ## To Do
- - change getReceiverData() to a specific input \
- - create getAllReceiverData() to replace the old getRecieverData() \
- - add analog redstone mode \
+ - change getReceiverData() to a specific input
+ - create getAllReceiverData() to replace the old getRecieverData()
+ - add analog redstone mode
  - set transceiver input and output per side instead of per pc
