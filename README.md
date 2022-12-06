@@ -31,7 +31,7 @@ To setup a tranceiver you need to set : \
 the type in `local type = "transmitter/receiver"` \
 the sides and names `local sideAndName = ({` \
 ` side= "left/right/up/down/front/back"` \
-` name = name to get/set it later`
+` name = name to get/set it later` \
 `})`
 ## To Do
  - change getReceiverData() to a specific input
