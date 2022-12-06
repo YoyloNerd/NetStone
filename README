@@ -1,0 +1,36 @@
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="NetStone_0"></a>NetStone</h1>
+<p class="has-line-data" data-line-start="1" data-line-end="2">NetStone is a way to use a opencomputer network to send and recieve redstone in and outputs</p>
+<h2 class="code-line" data-line-start=3 data-line-end=4 ><a id="Host_3"></a>Host</h2>
+<p class="has-line-data" data-line-start="4" data-line-end="5">The host pc is the pc that controls all the transceivers using the a local network and the NetStone api</p>
+<h3 class="code-line" data-line-start=6 data-line-end=7 ><a id="API_6"></a>API</h3>
+<p class="has-line-data" data-line-start="7" data-line-end="9">The netstone processor file can be used as an API for your own projects<br>
+to use NetStone jus use: <code>netStone = require(&quot;./&quot;netstone location&quot;/netStoneProcessor&quot;)</code></p>
+<h3 class="code-line" data-line-start=10 data-line-end=11 ><a id="Functions_10"></a>Functions</h3>
+<p class="has-line-data" data-line-start="11" data-line-end="20">netStone.setPCsNeeded(<code>number</code>) //set the pc amount of transceiver pcs<br>
+netStone.setProtocol(<code>string</code>) //set the protocol the system comunicates over <code>(default: &quot;networkRedstone&quot;)</code><br>
+netStone.setHost(<code>string</code>) // set the host name so the transceivers know which pc they need to respond to <code>(default: &quot;Main PC&quot;)</code><br>
+netStone.connect() //runs the start function to get and connect to all transceivers<br>
+netStone.getReceiverData() //gets data from all receivers.<br>
+example:<br>
+<code>local data = netStone.getRecieverData()</code><br>
+<code>print(data.redstoneInputName) // returns true or false</code><br>
+netStone.sendTransmitterData(<code>redstone output name</code>, <code>true/false</code>) //sets the output to redstone strength 15 (true) or 0 (false)</p>
+<h2 class="code-line" data-line-start=22 data-line-end=23 ><a id="Transceivers_22"></a>Transceivers</h2>
+<p class="has-line-data" data-line-start="23" data-line-end="27">A transceiver can either be a receiver or transmitter<br>
+A receiver gets only has redsone inputs<br>
+A transmitter only has redstone outputs<br>
+the transceivers do not have an api just a script that needs to be ran directly</p>
+<h3 class="code-line" data-line-start=28 data-line-end=29 ><a id="Setup_28"></a>Setup</h3>
+<p class="has-line-data" data-line-start="29" data-line-end="35">To setup a tranceiver you need to set :<br>
+the type in <code>local type = &quot;transmitter/receiver&quot;</code><br>
+the sides and names <code>local sideAndName = ({</code><br>
+<code>side= &quot;left/right/up/down/front/back&quot;</code><br>
+<code>name = name to get/set it later</code><br>
+<code>})</code></p>
+<h2 class="code-line" data-line-start=35 data-line-end=36 ><a id="To_Do_35"></a>To Do</h2>
+<ul>
+<li class="has-line-data" data-line-start="36" data-line-end="37">change getReceiverData() to a specific input</li>
+<li class="has-line-data" data-line-start="37" data-line-end="38">create getAllReceiverData() to replace the old getRecieverData()</li>
+<li class="has-line-data" data-line-start="38" data-line-end="39">add analog redstone mode</li>
+<li class="has-line-data" data-line-start="39" data-line-end="40">set transceiver input and output per side instead of per pc</li>
+</ul>
